@@ -43,10 +43,13 @@ class Program
             newEntry._entryText = userResponse;
 
             entries.AddEntry(date, prompt, userResponse);
+            Console.WriteLine("Entry recorded!");
+            Console.WriteLine();
         }
         else if (choice == "2")
         {
             entries.DisplayAll();
+            Console.WriteLine();
         }
         else if (choice == "3")
         {
