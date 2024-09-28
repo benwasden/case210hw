@@ -34,7 +34,7 @@ public class Journal
     {
         // Loop through each item in _entries and save to file
 
-        file = file + ".txt";
+        file = file + ".csv";
 
         if (File.Exists(file))
         {
@@ -67,7 +67,7 @@ public class Journal
     public void LoadFromFile(string file)
     {
         // Loop through each line of file and create Entry objects to put in list
-        file = file + ".txt";
+        file = file + ".csv";
 
         if (File.Exists(file))
         {

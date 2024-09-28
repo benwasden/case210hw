@@ -1,3 +1,8 @@
+// I decided to use csv as the file format for the final design, though the same code works if you change the .csv to .txt
+// in the SaveToFile and LoadFromFile functions in the Journal class. Additionally in those functions, I also added a method
+// that checks to make sure there is a file by that name that exists. In the case of the save function, it appends the journal
+// to the csv file if a file is found, and in the case of load it gives an error and says to enter a valid name.
+
 using System;
 using System.Dynamic;
 using System.Runtime.CompilerServices;
