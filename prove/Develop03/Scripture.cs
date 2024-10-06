@@ -33,6 +33,12 @@ public class Scripture
 
         Random randomGenerator = new Random();
 
+        List<Word> visibleWords = GetVisibleWords();
+        if (visibleWords.Count() < numberToHide)
+        {
+            numberToHide = visibleWords.Count();
+        }
+
         while (hiddenWordsCount < numberToHide)
         {
             int randomIndex = randomGenerator.Next(0, sizeOfList);
@@ -70,5 +76,18 @@ public class Scripture
             }
         }
         return true;
+    }
+
+    private List<Word> GetVisibleWords()
+    {
+        List<Word> visibleWords = new List<Word>();
+        foreach (Word word in _words)
+        {
+            if (!word.isHidden())
+            {
+                visibleWords.Add(word);
+            }
+        }
+        return visibleWords;
     }
 }
