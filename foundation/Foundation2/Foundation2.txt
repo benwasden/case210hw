@@ -1,0 +1,51 @@
+______________________________________________________________
+|                         Order                              |
+|------------------------------------------------------------|
+| _customer: Customer                                        |
+| _products: List<Product>                                   |
+|                                                            |
+| TotalCost(): float                                         |
+| DisplayTotalCost(): void                                   |
+| Shipping(): float                                          |
+| AddProduct(Product item)                                   |
+| PackingLabel(): void                                       |
+| ShippingLabel(): void                                      |
+--------------------------------------------------------------
+______________________________________________________________
+|                         Product                            |
+|------------------------------------------------------------|
+| _name: string                                              |
+| _productID: string                                         |
+| _price: double                                             |
+| _quantity: int                                             |
+|                                                            |
+| Product(string: name, string: productID, double: price,    |
+| int: quantity)                                             |
+| GetQuantity(): int                                         |
+| GetPrice(): double                                         |
+| GetProductID(): string                                     |
+| GetName(): string                                          |
+| CalculatePrice(): double                                   |
+--------------------------------------------------------------
+______________________________________________________________
+|                         Customer                           |
+-------------------------------------------------------------|
+| _name: string                                              |
+| _address: Address                                          |
+|                                                            |
+| FromUSA(Address address): void                             |
+| AddComment(Comment comment): void                          |
+| MakeAddress(): string                                      |
+--------------------------------------------------------------
+______________________________________________________________
+|                         Address                            |
+|------------------------------------------------------------|
+| _address: string                                           |
+| _city: string                                              |
+| _state: string                                             |
+| _country: string                                           |
+|                                                            |
+| Address(string address, string city, string state,         |
+| string country): bool                                      |
+| FinalAddress(): string                                     |
+--------------------------------------------------------------

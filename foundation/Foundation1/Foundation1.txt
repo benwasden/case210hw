@@ -1,0 +1,22 @@
+_____________________________________________________________
+|                         Video                              |
+-------------------------------------------------------------|
+| _title: string                                             |
+| _author: string                                            |
+| _length: string                                            |
+| _comments: List<Comment>                                   |
+|                                                            |
+| Video(string: title, string: author, string: length): void |
+| AddComment(Comment comment): void                          |
+| CommentCount(): int                                        |
+| Display(): void                                            |
+--------------------------------------------------------------
+_____________________________________________________________
+|                         Comment                            |
+-------------------------------------------------------------
+| _name: string                                              |
+| _comment: string                                           |
+|                                                            |
+| Comment(string name, string comment): void                 |
+| DisplayComment(): void                                     |
+--------------------------------------------------------------

@@ -59,7 +59,6 @@ public class Journal
                 }
             }
         }
-        _entries.Clear();
         Console.WriteLine("Save Complete!");
         Console.WriteLine();
     }
