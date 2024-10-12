@@ -4,12 +4,12 @@ ______________________________________________________________
 | _customer: Customer                                        |
 | _products: List<Product>                                   |
 |                                                            |
-| TotalCost(): float                                         |
-| DisplayTotalCost(): void                                   |
-| Shipping(): float                                          |
-| AddProduct(Product item)                                   |
+| TotalCost(): double                                        |
+| Shipping(): double                                         |
+| AddProduct(Product item): void                             |
 | PackingLabel(): void                                       |
 | ShippingLabel(): void                                      |
+| DisplayInfo(): void                                        |
 --------------------------------------------------------------
 ______________________________________________________________
 |                         Product                            |
@@ -33,9 +33,9 @@ ______________________________________________________________
 | _name: string                                              |
 | _address: Address                                          |
 |                                                            |
-| FromUSA(Address address): void                             |
-| AddComment(Comment comment): void                          |
-| MakeAddress(): string                                      |
+| FromUSA(Address address): bool                             |
+| GetCustomerName(): string                                  |
+| GetAddress(): string                                       |
 --------------------------------------------------------------
 ______________________________________________________________
 |                         Address                            |
@@ -47,5 +47,6 @@ ______________________________________________________________
 |                                                            |
 | Address(string address, string city, string state,         |
 | string country): bool                                      |
+| Country(): bool                                            | 
 | FinalAddress(): string                                     |
 --------------------------------------------------------------
