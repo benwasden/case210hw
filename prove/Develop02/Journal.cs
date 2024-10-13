@@ -34,18 +34,32 @@ public class Journal
     {
         // Loop through each item in _entries and save to file
 
-        file = file + ".csv";
-
         if (File.Exists(file))
         {
             Console.WriteLine();
-            Console.WriteLine($"{file} already exists. Adding entries...");
-            using (StreamWriter outputFile = File.AppendText(file))
+            Console.WriteLine($"{file} already exists. Would you like to overwrite this journal? (Y/N): ");
+            string answer = Console.ReadLine();
+            if (answer.ToUpper() == "Y")
             {
-                foreach (Entry entry in _entries)
+                // using (StreamWriter outputFile = File.AppendText(file))
+                // {
+                //     foreach (Entry entry in _entries)
+                //     {
+                //         outputFile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
+                //     }
+                // }
+                using (StreamWriter outputFile = new StreamWriter(file))
                 {
-                    outputFile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
+                    foreach (Entry entry in _entries)
+                    {
+                        outputFile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
+                    }
                 }
+                Console.WriteLine("Save Complete!");
+            }
+            else
+            {
+                Console.WriteLine("Exited");
             }
         }
         else
@@ -58,15 +72,14 @@ public class Journal
                     outputFile.WriteLine($"{entry._date},{entry._promptText},{entry._entryText}");
                 }
             }
+            Console.WriteLine("Save Complete!");
         }
-        Console.WriteLine("Save Complete!");
         Console.WriteLine();
     }
 
     public void LoadFromFile(string file)
     {
         // Loop through each line of file and create Entry objects to put in list
-        file = file + ".csv";
 
         if (File.Exists(file))
         {

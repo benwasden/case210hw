@@ -1,7 +1,7 @@
-// I decided to use csv as the file format for the final design, though the same code works if you change the .csv to .txt
-// in the SaveToFile and LoadFromFile functions in the Journal class. Additionally in those functions, I also added a method
-// that checks to make sure there is a file by that name that exists. In the case of the save function, it appends the journal
-// to the csv file if a file is found, and in the case of load it gives an error and says to enter a valid name.
+// I ended up removing the .csv part in the Journal class. I thought that appending it for the user would make it easier, but I lost points for it so I just removed it.
+// I adjusted the SaveToFile method as well. I couldn't figure out a way to check a csv file for duplicate entries, so I went ahead and adjusted it to make saving
+// more in line with what the rubric wanted. It still checks for whether the file exists or not, though if a file is found it asks the user to confirm if they want to overwrite it.
+// The same addition of checking whether or not the file exists is also present in the LoadFromFile method.
 
 using System;
 using System.Dynamic;
@@ -19,6 +19,7 @@ class Program
 
         Journal entries = new Journal();
         
+        Console.Clear();
         Console.WriteLine("Welcome to the Journal Program!");
         string choice;
         do
@@ -59,7 +60,7 @@ class Program
         }
         else if (choice == "4")
         {
-            Console.WriteLine("Enter the filename:");
+            Console.WriteLine("Enter the filename (.txt or .csv preferred):");
             string filename = Console.ReadLine();
             entries.SaveToFile(filename);
         }
