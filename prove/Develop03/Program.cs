@@ -28,7 +28,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
@@ -63,7 +63,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
@@ -98,7 +98,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
@@ -133,7 +133,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
@@ -168,7 +168,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
@@ -203,7 +203,7 @@ class Program
             string input = Console.ReadLine();
             if (input.ToLower() == "quit")
             {
-                break;
+                Environment.Exit(0);
             }
             else if (input == "")
             {
