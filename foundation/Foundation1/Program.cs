@@ -5,6 +5,8 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
+        
+        List<Video> videos = new List<Video>();
 
         Video video1 = new Video("Black Cat Running", "Ben Wasden", 600);
 
@@ -16,7 +18,7 @@ class Program
         video1.AddComment(video1Comment2);
         video1.AddComment(video1Comment3);
 
-        video1.Display();
+        videos.Add(video1);
 
 
         Video video2 = new Video("Alarmo Reveal", "Nintendo", 800);
@@ -29,7 +31,7 @@ class Program
         video2.AddComment(video2Comment2);
         video2.AddComment(video2Comment3);
 
-        video2.Display();
+        videos.Add(video2);
 
         
         Video video3 = new Video("iOS 18 Features", "Shaun", 1200);
@@ -42,6 +44,11 @@ class Program
         video3.AddComment(video3Comment2);
         video3.AddComment(video3Comment3);
 
-        video3.Display();
+        videos.Add(video3);
+
+        foreach (Video video in videos)
+        {
+            video.Display();
+        }
     }
 }
