@@ -1,3 +1,7 @@
+// I added a system to check to make sure no questions are repeated in the
+// reflecting activity until all of them have been shown once. It also informs the
+// user if they've looped through all the questions before showing them again.
+
 using System;
 
 class Program
@@ -41,7 +45,9 @@ class Program
             }
             else
             {
-                Console.WriteLine("Please enter a valid selection");
+                Console.WriteLine();
+                Console.WriteLine("Please enter a valid selection.");
+                Thread.Sleep(2000);
                 Console.WriteLine();
             }
         }

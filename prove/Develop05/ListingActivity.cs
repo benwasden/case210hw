@@ -2,7 +2,6 @@ using System;
 
 public class ListingActivity : Activity
 {
-    private int _count;
     private List<string> _prompts = new List<string> {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
@@ -50,7 +49,7 @@ public class ListingActivity : Activity
 
         while (DateTime.Now <= endTime)
         {
-            Console.Write(" >");
+            Console.Write(" > ");
             string response = Console.ReadLine();
 
             responses.Add(response);

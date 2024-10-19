@@ -45,26 +45,10 @@ public class ReflectingActivity : Activity
     }
     public string GetRandomQuestion()
     {
-        // List<string> usedQuestions = new List<string> {};
-
         Random randomGenerator2 = new Random();
         int indexNumber2 = randomGenerator2.Next(0, _questions.Count());
 
         string selectedQuestion = _questions[indexNumber2];
-
-        // for (int i = 0; i < usedQuestions.Count; i++)
-        // {
-        //     if (usedQuestions.Contains(selectedQuestion))
-        //     {
-        //         indexNumber2 = randomGenerator2.Next(0, _questions.Count());
-        //     }
-        //     else
-        //     {
-        //         usedQuestions.Add(selectedQuestion);
-  
-        //     }
-        // }
-        // selectedQuestion = _questions[indexNumber2];
 
         return selectedQuestion;
     }
@@ -84,15 +68,28 @@ public class ReflectingActivity : Activity
     }
     public void DisplayQuestions()
     {
+        List<string> usedQuestions = new List<string> {};
         DateTime currentTime = DateTime.Now;
         DateTime endTime = currentTime.AddSeconds(_duration);
 
         while (DateTime.Now <= endTime)
         {
             string question = GetRandomQuestion();
-            Console.Write($"> {question} ");
-            ShowSpinner(7);
-            Console.WriteLine();
+            if (!usedQuestions.Contains(question))
+            {
+                usedQuestions.Add(question);
+                Console.Write($"> {question} ");
+                ShowSpinner(7);
+                Console.WriteLine();
+
+                if (usedQuestions.Count() == _questions.Count())
+                {
+                    Console.WriteLine();
+                    Console.WriteLine(" - All questions displayed; repeating questions... - ");
+                    usedQuestions.Clear();
+                    Console.WriteLine();
+                }
+            }
         }
     }
 }
