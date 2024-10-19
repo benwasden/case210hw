@@ -8,6 +8,8 @@ class Program
         while (answer != "4")
         {
             Console.Clear();
+            Console.WriteLine(" --- Mindfulness Program --- ");
+            Console.WriteLine();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start a breathing activity");
             Console.WriteLine("2. Start a reflecting activity");
@@ -23,14 +25,17 @@ class Program
             }
             else if (answer == "2")
             {
-
+                ReflectingActivity reflectingActivity = new ReflectingActivity();
+                reflectingActivity.Run();
             }
             else if (answer == "3")
             {
-
+                ListingActivity listingActivity = new ListingActivity();
+                listingActivity.Run();
             }
             else if (answer == "4")
             {
+                Console.WriteLine();
                 Console.WriteLine("Thanks for using the program!");
                 break;
             }

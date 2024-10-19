@@ -21,18 +21,19 @@ public class Activity
         Console.WriteLine(_description);
         Console.WriteLine();
         Console.Write("How long, in seconds, would you like for your session? ");
-        _duration = Console.Read();
+        string durationString = Console.ReadLine();
+        _duration = Convert.ToInt32(durationString);
         Console.Clear();
         Console.WriteLine("Get Ready...");
-
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("Well done!");
         ShowSpinner(3);
+        Console.WriteLine();
         Console.WriteLine($"You completed {_duration} seconds of the {_name}.");
-        ShowSpinner(3);
+        ShowSpinner(4);
     }
 
     public void ShowSpinner(int seconds)
