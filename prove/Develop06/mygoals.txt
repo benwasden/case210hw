@@ -1,0 +1,7 @@
+600
+2
+SimpleGoal,Give a blessing,Give blessing to someone,50,True
+EternalGoal,Read scriptures,Read for 15 mins a day,40
+ChecklistGoal,Go to temple,Do any ordinance,60,100,3,3
+ChecklistGoal,Feed Snug,Feed Snug his meals for the day,10,30,3,1
+SimpleGoal,Win a game of chess,Win a game of chess against my brother,20,False
